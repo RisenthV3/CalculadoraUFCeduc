@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/logoceducuf"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp" >
+
+                <EditText
+                    android:id="@+id/montouf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/montouf"
+                    android:maxLength="9"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="70dp">
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/prefixuf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:text="Monto UF" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp" >
+
+                <EditText
+                    android:id="@+id/etFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:clickable="true"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textIsSelectable="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/prefixfecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:text="Fecha" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp" >
+
+                <EditText
+                    android:id="@+id/uffecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/uffecha"
+                    android:maxLength="9"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textIsSelectable="false"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="70dp">
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/prefixuffecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:text="UF a la fecha" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp" >
+
+                <EditText
+                    android:id="@+id/montoclp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/montoclp"
+                    android:maxLength="9"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textIsSelectable="false"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="70dp">
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/prefixclp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:text="Monto CLP" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/guardarbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Guardar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/tablaregistrouf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+
+                    <TableRow>
+                        <TextView
+                            android:text="Fecha"
+                            android:textStyle="bold"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:text="Fecha UF"
+                            android:textStyle="bold"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:text="Monto"
+                            android:textStyle="bold"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:text="Total"
+                            android:textStyle="bold"
+                            android:padding="10dp" />
+                    </TableRow>
+
+                    <!-- Agrega aquí las filas que necesites -->
+
+                </TableLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
